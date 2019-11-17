@@ -1,0 +1,7 @@
+# directories to exclude
+.vs/
+bin/
+bin-int/
+
+# file to exclude
+*.user
