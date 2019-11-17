@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core.h"
+#include "Window.h"
 
 // testing
 #include "Log.h"
@@ -19,6 +20,12 @@ namespace GameEngine
 		virtual ~Application();
 
 		void run();
+
+	private:
+
+		std::unique_ptr<Window> mWindow;
+		
+		bool mRunning = true;
 
 	};
 

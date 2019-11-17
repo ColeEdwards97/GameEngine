@@ -1,12 +1,14 @@
 #include "gepch.h"
 #include "Application.h"
 
+#include <GLFW/glfw3.h>
+
 namespace GameEngine
 {
 
 	Application::Application()
 	{
-
+		mWindow = std::unique_ptr<Window>(Window::create());
 	}
 
 	Application::~Application()
@@ -17,10 +19,12 @@ namespace GameEngine
 
 	void Application::run()
 	{
-		WindowResizeEvent e(800, 600);
-		CORE_LOG_TRACE(e);
-
-		while (true);
+		while (mRunning)
+		{
+			glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+			glClear(GL_COLOR_BUFFER_BIT);
+			mWindow->onUpdate();
+		}
 	}
 
 }
