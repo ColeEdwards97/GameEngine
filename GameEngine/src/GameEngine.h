@@ -3,7 +3,7 @@
 // FOR APPLICATIONS USE ONLY
 
 #include "GameEngine/Application.h"
-
+#include "GameEngine/Log.h"
 
 // ENTRY POINT ------------------------------------------------
 // ------------------------------------------------------------
