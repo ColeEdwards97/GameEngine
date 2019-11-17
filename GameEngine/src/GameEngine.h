@@ -4,6 +4,7 @@
 
 #include "GameEngine/Application.h"
 #include "GameEngine/Log.h"
+#include "GameEngine/Event/Event.h"
 
 // ENTRY POINT ------------------------------------------------
 // ------------------------------------------------------------

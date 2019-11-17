@@ -26,12 +26,13 @@ project "GameEngine"
 	
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 	
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "on"
 		systemversion "latest"
 	
 		defines
@@ -47,22 +48,21 @@ project "GameEngine"
 		
 	filter "configurations:Debug"
 		defines "GE_DEBUG"
-		symbols "On"
+		symbols "on"
 		
 	filter "configurations:Release"
 		defines "GE_RELEASE"
-		optimize "On"
+		optimize "on"
 		
 	filter "configurations:Dist"
 		defines "GE_DIST"
-		optimize "On"
+		optimize "on"
 		
 		
 		
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
-	
 	language "C++"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -87,7 +87,7 @@ project "Sandbox"
 	
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "on"
 		systemversion "latest"
 	
 		defines
@@ -97,12 +97,12 @@ project "Sandbox"
 		
 	filter "configurations:Debug"
 		defines "GE_DEBUG"
-		symbols "On"
+		symbols "on"
 		
 	filter "configurations:Release"
 		defines "GE_RELEASE"
-		optimize "On"
+		optimize "on"
 		
 	filter "configurations:Dist"
 		defines "GE_DIST"
-		optimize "On"
+		optimize "on"

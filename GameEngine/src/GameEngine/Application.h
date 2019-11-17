@@ -2,6 +2,12 @@
 
 #include "Core.h"
 
+// testing
+#include "Log.h"
+#include "Event/Event.h"
+#include "Event/ApplicationEvent.h"
+// testing
+
 namespace GameEngine
 {
 	class GAMEENGINE_API Application
