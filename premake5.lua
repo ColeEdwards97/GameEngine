@@ -13,11 +13,13 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 includedir = {}
 includedir["GLFW"] = "GameEngine/vendor/GLFW/include"
 includedir["Glad"] = "GameEngine/vendor/Glad/include"
+includedir["imgui"] = "GameEngine/vendor/imgui"
 	
 	
 include "GameEngine/vendor/GLFW"
 include "GameEngine/vendor/Glad"
-	
+include "GameEngine/vendor/imgui"
+
 project "GameEngine"
 	location "GameEngine"
 	kind "SharedLib"
@@ -40,7 +42,8 @@ project "GameEngine"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{includedir.GLFW}",
-		"%{includedir.Glad}"
+		"%{includedir.Glad}",
+		"%{includedir.imgui}"
 		
 	}
 	
@@ -48,6 +51,7 @@ project "GameEngine"
 	{
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 	

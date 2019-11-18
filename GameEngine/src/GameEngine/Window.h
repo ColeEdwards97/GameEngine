@@ -17,8 +17,8 @@ namespace GameEngine
 		unsigned int height;
 
 		WindowProperties(const std::string& title = "Game Engine",
-						unsigned int width = 800,
-						unsigned int height = 600) 
+						unsigned int width = 1280,
+						unsigned int height = 720) 
 			: title(title), width(width), height(height) {}
 
 	};

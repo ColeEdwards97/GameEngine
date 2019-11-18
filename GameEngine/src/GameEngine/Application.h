@@ -28,7 +28,12 @@ namespace GameEngine
 		void pushLayer(Layer* layer);
 		void pushOverlay(Layer* overlay);
 
+		inline static Application& get() { return *sInstance; }
+		inline Window& getWindow() { return *mWindow; }
+
 	private:
+
+		static Application* sInstance;
 
 		std::unique_ptr<Window> mWindow;
 		
