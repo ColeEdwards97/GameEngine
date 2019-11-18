@@ -56,6 +56,8 @@ namespace GameEngine
 			return getCategoryFlags() & category;
 		}
 
+		inline bool isHandled() const { return mIsHandled; }
+
 	protected:
 		bool mIsHandled = false;
 

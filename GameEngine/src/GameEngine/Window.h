@@ -3,6 +3,7 @@
 #include "gepch.h"
 
 #include "GameEngine/Core.h"
+
 #include "GameEngine/Event/Event.h"
 
 
@@ -37,7 +38,7 @@ namespace GameEngine
 		virtual unsigned int getWidth() const = 0;
 		virtual unsigned int getHeight() const = 0;
 
-		virtual void setCallbackEvent(const EventCallbackFcn& callback) = 0;
+		virtual void setEventCallback(const EventCallbackFcn& callback) = 0;
 		virtual void setVSyncEnabled(bool enabled) = 0;
 		virtual bool isVSyncEnabled() const = 0;
 
